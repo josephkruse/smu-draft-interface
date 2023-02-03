@@ -1,0 +1,80 @@
+<html>
+    <head>
+<style>
+
+.page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+  transition: all 0.25s ease-out;
+  transform: translateX(-100%);
+}
+
+.page.active {
+  display: block;
+  transform: translateX(0);
+}
+
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 1;
+}
+
+.lightbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+</style>
+    </head>
+    <body>
+
+        <div id="page-container">
+            <div id="page1" class="page active">
+                <h2>Draft</h2>
+
+                <button class="turn-page-button">Turn Page</button>
+            </div>
+            <div id="page2" class="page" style="background: color #ccc;">
+                <h2>Select Decks</h2>
+                <button id="open-lightbox-button">Open Lightbox</button>
+                <br>
+                <button class="turn-page-button">Turn Page</button>
+                <button class="back-button">Back</button>
+            </div>
+            <div id="page3" class="page">
+                <h2>Record Results</h2>
+                
+                <button class="back-button">Back</button>
+            </div>
+          </div>
+
+
+
+          <script src="pages-script.js"></script>
+
+    </body>
+</html>

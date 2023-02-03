@@ -1,0 +1,104 @@
+<html>
+<head>
+
+    <style>
+
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-left, .lightbox-right {
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.lightbox-left {
+  transform: translateX(-100%);
+  background-color: blue;
+}
+
+.lightbox-right {
+  transform: translateX(100%);
+  background-color: red;
+}
+
+#lightbox-overlay.show {
+    visibility: visible;
+}
+
+#lightbox-overlay.show .lightbox-left {
+  transform: translateX(0);
+}
+
+#lightbox-overlay.show .lightbox-right {
+  transform: translateX(0);
+}
+
+button {
+  position: relative;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}  
+
+
+    </style>
+
+</head>
+<body>
+
+    <button>testing</button>
+
+
+    <div id="lightbox-overlay">
+        
+        <div class="lightbox-left"></div>
+        <div class="lightbox-right">
+
+            <button onclick="hideLightbox()">click me</button>
+
+        </div>
+      </div>
+
+
+<script>
+
+const lightboxOverlay = document.getElementById("lightbox-overlay");
+
+function showLightbox() {
+  lightboxOverlay.classList.add("show");
+}
+
+function hideLightbox() {
+  lightboxOverlay.classList.remove("show");
+}
+
+setTimeout(function() {
+    showLightbox();
+}, 100);
+
+
+
+
+</script>
+
+
+</body>
+</html>

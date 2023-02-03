@@ -1,0 +1,73 @@
+<html>
+<head>
+
+</head>
+<body>
+
+
+<form action="draft.html" method="get">
+    <h1>Draft Setup</h1>
+    <h4>Number of Players</h4>
+    <label><input type="radio" name="draftNumPlayers" value="2" checked> 2</label>
+    <label><input type="radio" name="draftNumPlayers" value="4"> 4</label>
+    <hr>
+    <h4>Player Names</h4>
+    <input type="text" name="p1Name" placeholder="player 1 name">
+    <input type="text" name="p2Name" placeholder="player 2 name">
+    <div id="js-additional-player-names" style="display:inline;">
+
+    </div>
+    <hr>
+    <h4>First player:</h4>
+    <label><input type="radio" name="draftFirstPlayerType" value="p1" checked> Player 1</label>
+    <label><input type="radio" name="draftFirstPlayerType" value="random"> Random</label>
+    <hr>
+    <h4>Select Set</h4>
+    <label><input type="radio" name="draftSet" value="basic" checked> Basic</label>
+    <label><input type="radio" name="draftSet" value="intermediate"> Intermediate</label>
+    <label><input type="radio" name="draftSet" value="advanced"> Advanced</label>
+    <hr>
+    <h4>Pick Type</h4>
+    <label><input type="radio" name="draftPickType" value="standard" checked> Standard</label>
+    <label><input type="radio" name="draftPickType" value="randomized"> Randomized</label>
+    <label><input type="radio" name="draftPickType" value="blind"> Blind</label>
+    <hr>
+    <h4>Bans</h4>
+    <label><input type="radio" name="draftBans" value="none" checked> None</label>
+    <label><input type="radio" name="draftBans" value="first"> First Round</label>
+    <label><input type="radio" name="draftBans" value="second"> Second Round</label>
+    <label><input type="radio" name="draftBans" value="both"> Both Rounds</label>
+    <hr>
+    <input type="submit" value="Submit">
+    
+</form>
+
+
+
+<script>
+
+
+// show/hide name input text fields based on radio input selected for number of players
+const additionalPlayersContainer = document.getElementById("js-additional-player-names");
+const radioInputs = document.querySelectorAll('input[name="draftNumPlayers"]');
+
+for (let i = 0; i < radioInputs.length; i++) {
+  radioInputs[i].addEventListener("change", function () {
+    const numPlayers = this.value;
+    if (numPlayers === "4") {
+        additionalPlayersContainer.innerHTML = `
+        <input type="text" name="p3Name" placeholder="player 3 name">
+        <input type="text" name="p4Name" placeholder="player 4 name">
+      `;
+    } else {
+        additionalPlayersContainer.innerHTML = "";
+    }
+  });
+}
+
+
+
+</script>
+
+</body>
+</html>

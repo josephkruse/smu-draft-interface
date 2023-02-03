@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Draft Interface</title>
+  <link rel="stylesheet" href="style-reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<form>
+<div id="js-draft-state-data" style="visibility:hidden;"></div>
+<div class="draftContainer">
+
+  <div id="js-playerCard-container"></div>
+
+  <div class="deckGrid" id="js-deckGrid"></div>
+
+</div><!--draftContainer-->
+</form>
+
+<div class="deckLightbox" id="js-deckLightbox">
+  <div class="deckLightbox__contentLeft" id="js-deckLightbox__contentLeft">
+
+  
+  </div>
+  <div class="deckLightbox__contentRight">
+
+    <div id="js-deckLightbox__contentRight"></div>
+
+    <button class="deckLightbox__closeButton close-button" aria-label="Close" onclick="hideDeckLightbox()"></button>
+
+    <button class="deckLightbox__confirmPickButton button--big" id="js-confirm-pick-button">Confirm Pick</button>
+  
+  </div>
+</div>
+
+
+  
+
+<audio id="js-sound-click" src="audio/click.wav"></audio>
+<audio id="js-sound-woosh" src="audio/woosh.wav"></audio>
+<audio id="js-sound-glitch" src="audio/glitch.wav"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

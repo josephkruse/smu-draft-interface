@@ -1,0 +1,426 @@
+{
+  "decks": [
+    {
+      "code": "w-humans",
+      "name": "Humans",
+      "set": "basic",
+      "color": "w",
+      "description" : "Ifn it white, it aint right."
+    },
+    {
+      "code": "w-lifegain",
+      "name": "Lifegain",
+      "set": "intermediate",
+      "color": "w",
+      "description" : "Gain some life yo."
+    },
+    {
+      "code": "w-vehicles",
+      "name": "Vehicles",
+      "set": "intermediate",
+      "color": "w",
+      "description" : "Boats and hoes."
+    },
+    {
+      "code": "w-auras",
+      "name": "Auras",
+      "set": "advanced",
+      "color": "w",
+      "description" : "Pump yo dudes."
+    },
+
+
+    {
+      "code": "u-gowide",
+      "name": "Blue Go Wide",
+      "set": "basic",
+      "color": "u",
+      "description" : "Zombie swarm fo yo ass."
+    },
+    {
+      "code": "u-draw",
+      "name": "Draw",
+      "set": "intermediate",
+      "color": "u",
+      "description" : "Draw dem cards."
+    },
+    {
+      "code": "u-spirits",
+      "name": "Spirits",
+      "set": "intermediate",
+      "color": "u",
+      "description" : "Spook magook boys."
+    },
+    {
+      "code": "u-tempo",
+      "name": "Tempo",
+      "set": "advanced",
+      "color": "u",
+      "description" : "freeze biatch."
+    },
+
+    
+    {
+      "code": "b-aggro",
+      "name": "Black Aggro",
+      "set": "basic",
+      "color": "b",
+      "description" : "Beatdown boys."
+    },
+    {
+      "code": "b-control",
+      "name": "Black Control",
+      "set": "intermediate",
+      "color": "b",
+      "description" : "Yo shit ded."
+    },
+    {
+      "code": "b-sacrifice",
+      "name": "Sacrifice",
+      "set": "intermediate",
+      "color": "b",
+      "description" : "Sac and smack."
+    },
+    {
+      "code": "b-discard",
+      "name": "Discard",
+      "set": "advanced",
+      "color": "b",
+      "description" : "Hide yo cards."
+    },
+
+
+    {
+      "code": "r-rdw",
+      "name": "RDW",
+      "set": "basic",
+      "color": "r",
+      "description" : "Smash face."
+    },
+    {
+      "code": "r-bigred",
+      "name": "Big Red",
+      "set": "intermediate",
+      "color": "r",
+      "description" : "Big red boys that like to hurt people."
+    },
+    {
+      "code": "r-artifacts",
+      "name": "Artifacts",
+      "set": "intermediate",
+      "color": "r",
+      "description" : "Create and destroy robots."
+    },
+    {
+      "code": "r-burn",
+      "name": "Burn",
+      "set": "advanced",
+      "color": "r",
+      "description" : "Come on Pookie, lets burn this mf down."
+    },
+
+
+    {
+      "code": "g-devotion",
+      "name": "Green Devotion",
+      "set": "basic",
+      "color": "g",
+      "description" : "Green is good.",
+      "decklist" : [
+        {
+          "cardName": "Silver Back Shaman",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 5,
+          "copies" : 1
+        },
+        {
+          "cardName": "Garenbrig Paladin",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 5,
+          "copies" : 1
+        },
+        {
+          "cardName": "Renata, Called to the Hunt",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 4,
+          "copies" : 1
+        },
+        {
+          "cardName": "Nylea's Huntmaster",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 4,
+          "copies" : 1
+        },
+        {
+          "cardName": "Voracious Typhoon",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 4,
+          "copies" : 1
+        },
+        {
+          "cardName": "Strangleroot Geist",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 2,
+          "copies" : 1
+        },
+        {
+          "cardName": "Barkhide Troll",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 2,
+          "copies" : 1
+        },
+        {
+          "cardName": "Kalonian Tusker",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 2,
+          "copies" : 1
+        },
+        {
+          "cardName": "Young Wolf",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 1,
+          "copies" : 1
+        },
+        {
+          "cardName": "Elvish Mystic",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 1,
+          "copies" : 1
+        },
+        {
+          "cardName": "Bushwack",
+          "cardType": "Sorcery",
+          "color": "g",
+          "manaValue" : 1,
+          "copies" : 1
+        },
+        {
+          "cardName": "Aspect of Hydra",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 4,
+          "copies" : 1
+        },
+        {
+          "cardName": "Rhona's Monument",
+          "cardType": "Creature",
+          "color": "g",
+          "manaValue" : 4,
+          "copies" : 1
+        },
+        {
+          "cardName": "Thriving Grove",
+          "cardType": "Land",
+          "color": "c",
+          "manaValue" : 0,
+          "copies" : 1
+        },
+        {
+          "cardName": "Hashep Oasis",
+          "cardType": "Land",
+          "color": "c",
+          "manaValue" : 0,
+          "copies" : 1
+        },
+        {
+          "cardName": "Forest",
+          "cardType": "Land",
+          "color": "c",
+          "manaValue" : 0,
+          "copies" : 5
+        }
+      ]
+    },
+    {
+      "code": "g-deathtouch",
+      "name": "Deathtouch",
+      "set": "intermediate",
+      "color": "g",
+      "description" : "Wait. What dart?"
+    },
+    {
+      "code": "g-ramp",
+      "name": "Ramp",
+      "set": "intermediate",
+      "color": "g",
+      "description" : "Get out the lands."
+    },
+    {
+      "code": "g-counters",
+      "name": "Counters",
+      "set": "advanced",
+      "color": "g",
+      "description" : "Buff boys ready to pump you up."
+    },
+
+
+    {
+      "code": "wu-fliers",
+      "name": "Uw Fliers",
+      "set": "intermediate",
+      "color": "wu",
+      "description" : "Just some feathered friends."
+    },
+    {
+      "code": "wu-drawgo",
+      "name": "Wu Draw Go",
+      "set": "advanced",
+      "color": "wu",
+      "description" : "Pass the turn."
+    },
+
+
+    {
+      "code": "wb-clerics",
+      "name": "Wb Clerics",
+      "set": "intermediate",
+      "color": "wb",
+      "description" : "Hail satan!"
+    },
+    {
+      "code": "wb-drain",
+      "name": "Bw Drain",
+      "set": "advanced",
+      "color": "wb",
+      "description" : "Slurrrp."
+    },
+
+
+    {
+      "code": "wr-equipment",
+      "name": "Rw Equipment",
+      "set": "intermediate",
+      "color": "wr",
+      "description" : "Suit up."
+    },
+    {
+      "code": "wr-gowide",
+      "name": "Wr Go Wide",
+      "set": "advanced",
+      "color": "wr",
+      "description" : "Hope you like tokens."
+    },
+
+
+    {
+      "code": "wg-coven",
+      "name": "Gw Coven",
+      "set": "intermediate",
+      "color": "wg",
+      "description" : "Three its the magic number."
+    },
+    {
+      "code": "wg-enchantress",
+      "name": "Wg Enchantress",
+      "set": "advanced",
+      "color": "wg",
+      "description" : "Enchantments for your enchantments."
+    },
+
+
+    {
+      "code": "ub-zombies",
+      "name": "Bu Zombies",
+      "set": "intermediate",
+      "color": "ub",
+      "description" : "Brains are back on the menu."
+    },
+    {
+      "code": "ub-looting",
+      "name": "Ub Looting",
+      "set": "advanced",
+      "color": "ub",
+      "description" : "Toss it in the bin."
+    },
+
+
+    {
+      "code": "ur-izzet",
+      "name": "Ru Izzet",
+      "set": "intermediate",
+      "color": "ur",
+      "description" : "Mad scientist magic."
+    },
+    {
+      "code": "ur-artificers",
+      "name": "Ur Artificers",
+      "set": "advanced",
+      "color": "ur",
+      "description" : "Animating some shit."
+    },
+
+
+    {
+      "code": "ug-spellramp",
+      "name": "Gu Spell Ramp",
+      "set": "intermediate",
+      "color": "ug",
+      "description" : "Magic its what plants crave."
+    },
+    {
+      "code": "ug-selfmill",
+      "name": "Ug Self Mill",
+      "set": "advanced",
+      "color": "ug",
+      "description" : "The library is a resource."
+    },
+
+
+    {
+      "code": "br-vampires",
+      "name": "Rb Vampires",
+      "set": "intermediate",
+      "color": "br",
+      "description" : "Ah ah ah ah."
+    },
+    {
+      "code": "br-sacrifice",
+      "name": "Br Sacrifice",
+      "set": "advanced",
+      "color": "br",
+      "description" : "Plenty of meat for the grinder."
+    },
+
+
+    {
+      "code": "bg-elves",
+      "name": "Gb Elves",
+      "set": "intermediate",
+      "color": "bg",
+      "description" : "Killing you and looking good doing it."
+    },
+    {
+      "code": "bg-reanimator",
+      "name": "Bg Reanimator",
+      "set": "advanced",
+      "color": "bg",
+      "description" : "Look who's back."
+    },
+
+
+    {
+      "code": "rg-gruul",
+      "name": "Gr Gruul",
+      "set": "intermediate",
+      "color": "rg",
+      "description" : "Oh look some stuff to smash."
+    },
+    {
+      "code": "rg-domain",
+      "name": "Gr Domain",
+      "set": "advanced",
+      "color": "rg",
+      "description" : "Pick a color any color."
+    }
+  ]
+}

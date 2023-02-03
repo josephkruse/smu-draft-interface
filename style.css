@@ -1,0 +1,447 @@
+
+
+
+body{
+  background: #121925;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,h2{
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color:white;
+  font-weight:bold;
+}
+
+button {
+  background: linear-gradient(to bottom, #FFC107, #FF8C00);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-shadow: 1px 1px rgba(183, 134, 11, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+  filter: brightness(105%);
+  box-shadow: 1px 1px 2px #B8860B, 0px 0px 15px #FFC107;
+  text-shadow: 1px 1px rgba(183, 134, 11, 0.75);
+}
+
+
+.button--big{
+  font-size: 1.5rem;
+  padding: 18px 30px;
+ 
+} 
+
+button.close-button {
+  background: linear-gradient(to bottom, #FFC107, #FF8C00);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: 28px;
+  text-align: center;
+  text-shadow: 1px 1px rgba(183, 134, 11, 0.5);
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button.close-button:hover {
+  filter: brightness(105%);
+  box-shadow: 1px 1px 2px #B8860B, 0px 0px 15px #FFC107;
+  text-shadow: 1px 1px rgba(183, 134, 11, 0.75);
+}
+
+button.close-button::before {
+  content: "x";
+  display: block;
+  height: 100%;
+  line-height: 46px;
+}
+
+
+.playerCard{
+  display:block;
+  overflow: hidden;
+  height:120px;
+  width:500px;
+  max-width:45%;
+  margin-bottom:50px;
+}
+
+
+.playerCard--p1{
+  background-image: linear-gradient(to bottom left, #a3161a, #740d10);
+  border-bottom-right-radius: 10px;
+
+}
+.playerCard--p2{
+  background-image: linear-gradient(to bottom right, #013458, #02253a);
+  text-align:right;
+  position:absolute;
+  top:0;
+  right:0;
+  border-bottom-left-radius: 10px;
+
+}
+.playerCard--p3{
+  background-image: linear-gradient(to bottom left, #16a322, #0d7416);
+  position:absolute;
+  bottom:0;
+  left:0;
+  margin-bottom:0;
+  border-top-right-radius: 10px;
+
+}
+.playerCard--p4{
+  background-image: linear-gradient(to bottom right, #490158, #38023a);
+  text-align:right;
+  position:absolute;
+  bottom:0;
+  right:0;
+  margin-bottom:0;
+  border-top-left-radius: 10px;
+}
+
+.playerCard--pickTarget {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(130%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+
+.playerCard__deckPick{
+  position: relative;  
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin:6px;
+  background-position: center;  
+  background-size: 100%;
+  border-radius:50%;
+  border: none;
+  background-image:url("img/placeholder.png");
+  transition: background-size 0.1s ease-in-out;
+}
+.playerCard__deckPick::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  filter:saturate(100%);
+}
+
+.playerCard__deckPick--pickTarget{
+  animation: spin 4s linear infinite; /* animation property */
+}
+/* JANKY AF WORKAROUND FOR FRAME SPINNING WITH BUTTON ITSELF*/
+.playerCard__deckPick--pickTarget::after{ 
+  animation: spin 4s linear reverse infinite; /* animation property */
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.playerCard--p1 .playerCard__deckPick{
+  float:left;
+}
+.playerCard--p1 .playerCard__deckPick::after{
+  background-image: url("deck-button-overlay-red.png");
+  float:left;
+}
+.playerCard--p2 .playerCard__deckPick{
+  float:right;
+}
+.playerCard--p2 .playerCard__deckPick::after{
+  background-image: url("deck-button-overlay-blue.png");
+  float:left;
+}
+.playerCard--p3 .playerCard__deckPick{
+  float:left;
+}
+.playerCard--p3 .playerCard__deckPick::after{
+  background-image: url("deck-button-overlay-green.png");
+  float:left;
+}
+.playerCard--p4 .playerCard__deckPick{
+  float:right;
+}
+.playerCard--p4 .playerCard__deckPick::after{
+  background-image: url("deck-button-overlay-purple.png");
+  float:left;
+}
+
+
+
+
+.deckGrid {
+  position: relative; 
+  margin:0 auto;
+  text-align: center;
+  max-width:1200px;
+  clear: both;
+}
+
+.deckGrid--banPick .deckGrid__deckButton{
+  filter:saturate(90%);
+}
+
+.deckGrid__deckButton{
+  position: relative;  
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin:6px;
+  padding:0;
+  background-color: transparent;
+  background-position: center;
+  background-size: 100%;
+  border-radius:50%;
+  border: none;
+  transition: background-size 0.2s ease-in-out;
+  /* bg image set by js */
+  box-shadow: none;
+  
+}
+.deckGrid__deckButton:hover{
+  background-size: 105%;
+  filter:saturate(120%);
+  box-shadow:none;
+}
+
+
+
+
+
+.deckGrid__deckButton--isPicked{
+  filter:saturate(20%) brightness(120%);
+}
+.deckGrid__deckButton--isPicked:hover {
+  background-size: 100%;
+  filter:saturate(20%);
+}
+.deckGrid__deckButton--isPicked:hover::before {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("img/ban-x.png");
+  background-size: 90%;
+  border-radius:50%;
+  background-position:center;
+  visibility:visible;
+  background-image: url("img/ban-x.png");
+}
+.deckGrid__deckButton--isPicked:hover::after{
+  filter:saturate(100%) brightness(120%);
+}
+.deckGrid__deckButton--pickedBy-p1::after {
+  background-image: url("deck-button-overlay-red.png") !important;
+}
+.deckGrid__deckButton--pickedBy-p2::after {
+  background-image: url("deck-button-overlay-blue.png") !important;
+}
+.deckGrid__deckButton--pickedBy-p3::after {
+  background-image: url("deck-button-overlay-green.png") !important;
+}
+.deckGrid__deckButton--pickedBy-p4::after {
+  background-image: url("deck-button-overlay-purple.png") !important;
+}
+
+
+
+.deckGrid__randomizedPick .deckGrid__deckButton{
+  height: 200px;
+  width: 200px;
+}
+
+
+.deckGrid--banPick .deckGrid__deckButton:hover{
+  filter:saturate(20%) brightness(200%);
+}
+.deckGrid--banPick .deckGrid__deckButton::before {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("img/ban-x.png");
+  background-size: 90%;
+  border-radius:50%;
+  background-position:center;
+}
+
+.deckGrid__deckButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("deck-button-overlay.png");
+  background-size: 100%;
+}
+
+.deckGrid--banPick .deckGrid__deckButton:hover::before {
+  visibility:visible;
+  background-image: url("img/ban-x.png");
+}
+
+.deckGrid--banPick .deckGrid__deckButton:hover::after {
+  background-image: url("deck-button-black.png");
+}
+
+.deckGrid--p1Pick .deckGrid__deckButton:hover::after {
+  background-image: url("deck-button-overlay-red.png");
+}
+.deckGrid--p2Pick .deckGrid__deckButton:hover::after {
+  background-image: url("deck-button-overlay-blue.png");
+}
+.deckGrid--p3Pick .deckGrid__deckButton:hover::after {
+  background-image: url("deck-button-overlay-green.png");
+}
+.deckGrid--p4Pick .deckGrid__deckButton:hover::after {
+  background-image: url("deck-button-overlay-purple.png");
+}
+
+.deckGrid__deckButton--banned{
+  background-size: 100% !important;;
+}
+
+.deckGrid__deckButton--banned::after{
+  background-image: url("deck-button-overlay-red.png");
+}
+
+
+
+.deckLightbox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.deckLightbox__confirmPickButton{
+  position:absolute;
+  bottom:50px;
+  width:50%;
+  left:25%;
+}
+
+.deckLightbox__closeButton{
+  position:absolute;
+  top:50px;
+  right:50px;
+}
+
+.deckLightbox__contentLeft, .deckLightbox__contentRight {
+  width: 50%;
+  height: 100%;
+  transition: all 0.4s ease-out;
+  
+}
+
+.deckLightbox__contentLeft {
+  transform: translateX(-100%);
+  background-repeat:no-repeat !important;
+}
+
+.deckLightbox__contentRight {
+  transform: translateX(100%);
+  padding:2rem;
+}
+
+.deckLightbox.deckLightbox--show {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.deckLightbox.deckLightbox--show .deckLightbox__contentLeft {
+  transform: translateX(0);
+}
+
+.deckLightbox.deckLightbox--show .deckLightbox__contentRight {
+  transform: translateX(0);
+}
+
+
+.deckLightbox__heading{
+  margin-bottom: 0;
+  padding-top:100px;
+  font-size:50px;
+  display:block;
+  text-align:center;
+
+}
+.deckLightbox__description{
+  text-align:center;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color:white;
+  font-weight:bold;
+}
+
+
+.deckLightbox__decklist{
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  display: block;
+  margin: 1rem auto;
+  max-width: 400px;
+}
+.deckLightbox__decklist li{
+  margin-left:1rem;
+}
+
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.lightbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
