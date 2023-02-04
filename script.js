@@ -397,7 +397,7 @@ let gameData = {
           "name": "Gb Elves",
           "set": "intermediate",
           "color": "bg",
-          "description" : "Killing you and looking good doing it."
+          "description" : "Lean mean and green."
         },
         {
           "code": "bg-reanimator",

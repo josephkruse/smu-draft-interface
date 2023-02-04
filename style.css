@@ -376,7 +376,9 @@ button.close-button::before {
 
 .deckLightbox__contentLeft {
   transform: translateX(-100%);
-  background-repeat:no-repeat !important;
+  background-position: center top !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .deckLightbox__contentRight {
